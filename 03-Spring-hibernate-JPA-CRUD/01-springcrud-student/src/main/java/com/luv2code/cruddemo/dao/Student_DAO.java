@@ -6,4 +6,6 @@ import org.springframework.context.annotation.Bean;
 public interface Student_DAO
 {
     void Save(Student theStudent);
+
+    Student findById(int Id);
 }

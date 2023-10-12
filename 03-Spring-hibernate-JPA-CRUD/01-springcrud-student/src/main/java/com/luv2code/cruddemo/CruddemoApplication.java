@@ -1,5 +1,6 @@
 package com.luv2code.cruddemo;
 
+import ch.qos.logback.core.net.SyslogOutputStream;
 import com.luv2code.cruddemo.Entity.Student;
 import com.luv2code.cruddemo.dao.Student_DAO;
 import com.luv2code.cruddemo.dao.Student_DAO_Impl;
@@ -32,5 +33,11 @@ public class CruddemoApplication {
 		studentDao.Save(student);
 		//display Student ID
 		System.out.println("Student Id = "+ student.getId());
+
+		//get student by Id
+		Student mystudent = studentDao.findById(student.getId());
+
+		//Display student
+		System.out.println("The Student is = "+mystudent);
 	}
 }

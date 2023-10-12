@@ -21,4 +21,9 @@ public class Student_DAO_Impl implements Student_DAO
     {
         entitymanager.persist(theStudent);
     }
+
+    @Override
+    public Student findById(int Id) {
+        return entitymanager.find(Student.class,Id);
+    }
 }
